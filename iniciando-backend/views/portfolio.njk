@@ -1,23 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Marina Matos</title>
-    <meta charset="UTF-8" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <div class="links">
-        <a href="index.html">Sobre</a>
-        <a href="/">Aulas</a>
-      </div>
-    </header>
+{% extends "layout.html" %}
+
+{% block head %}
+<title>Portfolio - Marina Matos</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
 
     <div id="wrapper">
       <h1>Marina Matos</h1>
@@ -136,5 +124,4 @@
 
     <script src="script.js"></script>
 
-  </body>
-</html>
+{% endblock %}
