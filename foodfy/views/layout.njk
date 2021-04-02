@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {% block head %}
+      <title>Foody</title>
+  {% endblock %}
+
+  <link rel="stylesheet" href="/styles.css">
+
+</head>
+<body>
+  <header>
+    <div class="menu">
+      <a href="/"><img src="/assets/logo.png"></a>
+      <a href="/about">Sobre</a>
+      <a href="/recipes">Receitas</a>
+    </div>    
+  </header>
+
+    {% block content %}
+
+    {% endblock %}
+ 
+    <footer>Todos os direitos reservados</footer>
+  
+    <script src="script.js"></script>
+
+</body>
+</html>

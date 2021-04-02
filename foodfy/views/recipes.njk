@@ -1,19 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Foody</title>
-</head>
-<body>
-  <header>
-    <div class="menu">
-      <a href="index.html"><img src="assets/logo.png"></a>
-      <a href="sobre.html">Sobre</a>
-      <a href="receitas.html" class="active-page">Receitas</a>
-    </div>    
-  </header>
+{% extends "layout.njk" %}
+
+ {% block head %}
+      <title>Receitas</title>
+  {% endblock %}
+
+{% block content %}
     <section class="recipes">
       <div class="card" id="burger">
         <div class="card-img-container">
@@ -149,9 +140,4 @@
       </div>
     </div>
  
-    <footer>Todos os direitos reservados</footer>
-
-    <script src="script.js"></script>
-  
-</body>
-</html>
+{% endblock %}
