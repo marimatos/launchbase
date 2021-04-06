@@ -1,0 +1,13 @@
+{
+  "teachers": [
+    {
+      "id": 1,
+      "avatar_url": "http://sd.com",
+      "name": "dsfsf",
+      "birth": 1618272000000,
+      "degree": "D",
+      "class_type": "D",
+      "created_at": 1617747883237
+    }
+  ]
+}

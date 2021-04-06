@@ -1,7 +1,7 @@
 :root {
   --primary-color: #2D6DB9;
   --secundary-color: #49D7E5;
-  --constrast-color: #E5EE2D;
+  --contrast-color: #E5EE2D;
 }
 
 * {
@@ -135,4 +135,35 @@ header {
   display: inline-block;
   font-size: 12px;
   text-transform: uppercase;
+}
+
+/* FORM */
+input {
+  width: 100%;
+  outline: none;
+  color: #555;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+input[type="radio"] {
+  width: initial;
+  margin-right: 4px;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: normal;
+}
+
+button[type="submit"] {
+  padding: 8px 32px;
+  background-color: var(--contrast-color);
+  border-radius: 4px;
+  margin-top: 32px;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--primary-color);
+  font-weight: bold;
 }
