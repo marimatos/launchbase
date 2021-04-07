@@ -14,8 +14,6 @@ exports.show = function(req, res){
 
   if (!foundInstructor) return res.send("Instrutor não encontrado")
 
-  
-
   const instructor = {
     ...foundInstructor,
     age: age(foundInstructor.birth),

@@ -2,12 +2,23 @@
   "teachers": [
     {
       "id": 1,
-      "avatar_url": "http://sd.com",
-      "name": "dsfsf",
-      "birth": 1618272000000,
-      "degree": "D",
+      "avatar_url": "http://google.com",
+      "name": "marina",
+      "birth": 641692800000,
+      "degree": "ES",
       "class_type": "D",
-      "created_at": 1617747883237
+      "areas": "hehehe, hahahha",
+      "created_at": 1617803362637
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://gfkdfkd.com",
+      "name": "joao",
+      "birth": -378172800000,
+      "degree": "M",
+      "class_type": "P",
+      "areas": "fsdfsf",
+      "created_at": 1617807409515
     }
   ]
 }
