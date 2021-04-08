@@ -174,3 +174,8 @@ a.button {
   text-align: center;
   text-decoration: none;
 }
+
+#form-delete button {
+  background-color: lightcoral;
+  color: white;
+}
