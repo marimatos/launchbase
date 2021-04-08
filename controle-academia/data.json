@@ -1,31 +1,22 @@
 {
   "instructors": [
     {
-      "id": "1",
-      "name": "maria",
-      "avatar_url": "http://dsds",
-      "birth": 954892800000,
-      "gender": "F",
-      "services": "fsfsf",
-      "created_at": 1617748971494
+      "id": 1,
+      "name": "Mario",
+      "avatar_url": "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80",
+      "birth": 641692800000,
+      "gender": "M",
+      "services": "crossfit, natação",
+      "created_at": 1617844073548
     },
     {
-      "id": 3,
-      "name": "fsf",
-      "avatar_url": "http://dsds",
-      "birth": 954892800000,
+      "id": 2,
+      "name": "Maria",
+      "avatar_url": "https://images.unsplash.com/photo-1594381898411-846e7d193883?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=334&q=80",
+      "birth": null,
       "gender": "F",
-      "services": "fsfsf",
-      "created_at": 1617837752951
-    },
-    {
-      "id": 4,
-      "name": "jose",
-      "avatar_url": "http://dsds",
-      "birth": 1617580800000,
-      "gender": "F",
-      "services": "fsfsf",
-      "created_at": 1617837796136
+      "services": "futsal, basquete",
+      "created_at": 1617844170570
     }
   ]
 }

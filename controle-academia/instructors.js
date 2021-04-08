@@ -3,6 +3,10 @@ const data = require('./data.json')
 const { age,date } = require('./utils')
 const Intl = require('intl')
 
+exports.index =  function(req, res){
+  return res.render('instructors/index', {instructors: data.instructors})
+}
+
 //show
 exports.show = function(req, res){
   //req.params
@@ -98,7 +102,8 @@ exports.put = function(req,res) {
   const instructor = {
     ...foundInstructor,
     ...req.body,
-    birth: Date.parse(req.body.birth)
+    birth: Date.parse(req.body.birth),
+    id: Number(req.body.id)
   }
 
   data.instructors[index] = instructor
@@ -106,7 +111,7 @@ exports.put = function(req,res) {
     if(err) return res.send("Write error")
   })
 
-  return res.redirect("instructors/${id}")
+  return res.redirect("/instructors/${id}")
 }
 
 //delete
