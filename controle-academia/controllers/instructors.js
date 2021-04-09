@@ -1,6 +1,6 @@
 const fs = require('fs')
-const data = require('./data.json')
-const { age,date } = require('./utils')
+const data = require('../data.json')
+const { age, date } = require('../utils')
 const Intl = require('intl')
 
 exports.index =  function(req, res){
@@ -30,6 +30,11 @@ exports.show = function(req, res){
 }
 
 //create
+exports.create = function(req,res){
+  return res.render('instructors/create')
+}
+
+//post
 exports.post = function(req,res) {
   const keys = Object.keys(req.body)
   //cria um array com as chaves do body
@@ -79,7 +84,7 @@ exports.edit = function(req,res){
 
   const instructor = {
     ...foundInstructor,
-    birth: date(foundInstructor.birth)
+    birth: date(foundInstructor.birth).iso
   }
 
   return res.render("instructors/edit", {instructor})
@@ -111,7 +116,7 @@ exports.put = function(req,res) {
     if(err) return res.send("Write error")
   })
 
-  return res.redirect("/instructors/${id}")
+  return res.redirect(`/instructors/${id}`)
 }
 
 //delete
