@@ -185,3 +185,50 @@ span {
   display: none;
 }
 
+/*===ADMIN===*/
+.header-admin {
+  margin: 0;
+  width: 100%;
+  height: 80px;
+  background-color: black;
+  color: white;
+}
+
+.header-admin .menu-admin a img {
+  padding: 30px;
+  margin-left: 230px
+}
+
+.admin-container {
+  width: 940px;
+  margin: 50px auto;
+}
+
+.admin-container h1{
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+/*Listagem de receitas*/
+.recipes-admin {
+  margin: 0 auto;
+  max-width: 940px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 30px;
+}
+
+.recipes-admin .card {
+  display: flex;
+}
+
+.recipes-admin .card .card-img-container img{
+  width: 172px;
+  height: 80px;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center
+}
+
+
