@@ -17,10 +17,12 @@
 
   <div class="card" id="burger">
     <div class="card-img-container">
-      <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}"/>
+      <a href="/site/recipes/{{recipe.id}}">
+        <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}"/>
+      </a>      
     </div>
-    <div class="card-content">        
-      <p id="title">{{recipe.title}}</p>
+    <div class="card-content">      
+      <a href="/site/recipes/{{recipe.id}}">{{recipe.title}}</a>
       <p id="chef">{{recipe.author}}</p>
     </div>        
   </div>
