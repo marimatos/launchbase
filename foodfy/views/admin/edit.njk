@@ -1,0 +1,43 @@
+{% extends "layoutAdmin.njk" %}
+
+{% block head %}
+  <title>Editar Receita</title>
+{% endblock %}
+
+{% block content %}
+  
+  <section class="admin-container">
+    <form class="action-menu" id="form-delete" action="/instructors?_method=DELETE" method="POST">
+      <h1>Editando receita</h1>
+      <input type="hidden" name="id" value="{{recipe.id}}">   
+      <div class="buttons">
+        <button type="submit" class="button-admin">Deletar</button>
+        <button type="submit" class="button-admin">Salvar receita</button>
+      </div>         
+    </form>
+    <form method="POST" action="/admin?_method=PUT">
+      
+      {% include 'admin/fields.njk' %}
+
+      <input type="hidden" name="id" value="{{recipe.id}}">
+    </form>
+
+    
+
+  </section>
+
+
+
+<script>
+  const formDelete = document.querySelector("#form-delete")
+  formDelete.addEventListener("submit", function(event) {
+    const confirmation = confirm("Deseja deletar?")
+    if(!confirmation) {
+      event.preventDefault()
+    }
+  })
+</script>
+
+
+
+{% endblock%}

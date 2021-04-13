@@ -199,6 +199,31 @@ span {
   margin-left: 230px
 }
 
+.action-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.action-menu h1 {
+  font-size: 24px;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+
+.action-menu .button-admin {
+  color: white;
+  background: #6558C3;
+  border-radius: 4px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  line-height: 18px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .admin-container {
   width: 940px;
   margin: 50px auto;
@@ -231,4 +256,38 @@ span {
   object-position: center
 }
 
+/*editar receita*/
+.item h1{
+  font-size: 16px;
+  color: #111111;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
 
+textarea,
+.item input {
+  display: block;
+  width: 100%;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  padding: 15px 20px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.item a {
+  font-size: 16px;
+  color: #6558C3;
+  text-align: right;
+  text-decoration: none;
+}
+
+.item textarea{
+  height: 257px;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 24px;
+}

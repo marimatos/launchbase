@@ -1,0 +1,44 @@
+<div class="item">
+  <h1>Imagem da receita</h1>
+  <div>
+    <input 
+      type="url" 
+      name="image" 
+      placeholder="http://"
+      value="{{ recipe.image }}">
+  </div>
+</div>
+    
+<div class="item">
+  <h1>Ingredientes</h1>
+  <div>
+    {% for ingredient in recipe.ingredients%}
+    <input 
+      type="text" 
+      name="ingredient" 
+      value="{{ ingredient }}">
+    {% endfor %}
+    <a href="#">Adicionar novo ingrediente</a>
+  </div>
+</div>
+
+<div class="item">
+  <h1>Modo de preparo</h1>
+  <div>
+    {% for preparation in recipe.preparation %}
+    <input 
+    type="text" 
+    name="preparation"
+    value="{{ preparation }}">
+    {% endfor %}
+    <a href="#">Adicionar novo passo</a>
+  </div>
+</div>
+
+<div class="item">
+  <h1>Informações adicionais</h1>
+  <div>
+    <textarea name="information">{{ recipe.information }}</textarea>
+  </div>
+</div>
+
