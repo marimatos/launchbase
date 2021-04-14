@@ -1,0 +1,28 @@
+{% extends "layoutAdmin.njk" %}
+
+{% block head %}
+  <title>Criar Receita</title>
+{% endblock %}
+
+{% block content %}
+  
+  <section class="admin-container">
+    <div class="action-menu">
+    <h1>Criando Receita</h1>
+    <div class="buttons">
+      <button type="submit" form="form-edit" class="button-admin">Salvar receita</button>
+    </div>
+  </div>
+
+    <form id="form-edit" method="POST" action="/admin/recipes">      
+      {% include 'admin/fields.njk' %}
+      <input type="hidden" name="id" value="{{recipe.id}}">      
+    </form> 
+    
+
+  </section>
+
+
+
+{% endblock%}
+

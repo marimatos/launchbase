@@ -224,6 +224,10 @@ span {
   text-decoration: none;
 }
 
+.button-admin.btn-delete {
+  background: #DC4747;
+}
+
 .admin-container {
   width: 940px;
   margin: 50px auto;
@@ -281,6 +285,7 @@ textarea,
   color: #6558C3;
   text-align: right;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .item textarea{

@@ -9,30 +9,40 @@
   </div>
 </div>
     
-<div class="item">
-  <h1>Ingredientes</h1>
-  <div>
-    {% for ingredient in recipe.ingredients%}
-    <input 
-      type="text" 
-      name="ingredient" 
-      value="{{ ingredient }}">
+  <div class="item" id="ingredients">
+    <h1>Ingredientes</h1>
+    <div class="field-container">
+    {% if not recipe.ingredients %}
+        <div class="field-container">
+            <input type="text" name="ingredients[]" value="" placeholder="Novo ingrediente">
+        </div>
+    {% endif %}
+    {% for ingredient in recipe.ingredients %}
+      <div>
+        <input type="text" name="ingredients[]" value="{{ ingredient }}">
+      </div>
     {% endfor %}
-    <a href="#">Adicionar novo ingrediente</a>
-  </div>
+    </div>
+  <a class='add-field add-ingredient' onclick='addFields.add(event)'>Adicionar novo ingrediente</a>
+</div>
+  
 </div>
 
-<div class="item">
+<div class="item" id="preparation">
   <h1>Modo de preparo</h1>
-  <div>
+  {% if not recipe.preparation %}
+    <div class="field-container">
+        <input type="text" name="preparation[]" value="" placeholder="Adicione um modo de preparo">
+    </div>
+  {% endif %}
+  <div class="field-container">
     {% for preparation in recipe.preparation %}
-    <input 
-    type="text" 
-    name="preparation"
-    value="{{ preparation }}">
-    {% endfor %}
-    <a href="#">Adicionar novo passo</a>
+    <div>
+      <input type="text" name="preparation[]" value="{{ preparation }}">
+    </div>    
+    {% endfor %}    
   </div>
+  <a class="add-field add-preparation" onclick="addFields.add(event)">Adicionar novo passo</a>
 </div>
 
 <div class="item">
