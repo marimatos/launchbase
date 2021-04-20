@@ -52,14 +52,9 @@ exports.post = function(req,res) {
   const keys = Object.keys(req.body)
   //cria um array com as chaves do body
 
-     
-    let recipe = req.body
-    const id = Number(data.recipes.length + 1)
+    req.body.id = Number(data.recipes.length + 1)
   
-    data.recipes.push({
-      id,
-      ...recipe
-    })
+    data.recipes.push(req.body)
     
   
     fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
