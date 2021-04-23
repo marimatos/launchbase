@@ -6,3 +6,33 @@ for(item of menuItems) {
     item.classList.add("active")
   }
 }
+
+// Paginação
+
+function pagination(selectedPages, totalPages) {
+  let pages = [],
+    oldPage
+
+for(let currentPage = 1; currentPage <= totalPages; currentPage++) {
+  
+  const firstAndLastPage = currentPage == 1 || currentPage == totalPages
+  const pagesAfterSelectedPage = currentPage <= selectedPages + 2
+  const pagesBeforeSelectedPage = currentPage >= selectedPages - 2
+
+  if( firstAndLastPage || pagesBeforeSelectedPage &&  pagesAfterSelectedPage) {
+   
+    if(oldPage && currentPage - oldPage > 2){
+      pages.push("...")
+    }
+
+    if (oldPage && currentPage - oldPage == 2) {
+      pages.push(oldPage + 1)
+    }
+
+    pages.push(currentPage)
+    oldPage = currentPage
+  }
+}
+
+ return pages
+}
