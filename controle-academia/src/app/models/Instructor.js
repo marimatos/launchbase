@@ -120,7 +120,7 @@ module.exports = {
     }
 
     query = `
-    SELECT instructors.*, , count(members) as total_students
+    SELECT instructors.*, ${totalQuery}, count(members) as total_students
     FROM instructors
     LEFT JOIN members ON (instructors.id = members.instructor_id)
     ${filterQuery}
@@ -128,9 +128,9 @@ module.exports = {
     `
     
     db.query(query, [limit, offset], function(err, results){
-      if(err) throw 'Database error'
+      if(err) throw `Database error! ${err}`
 
-      callback(results.rows)
+       callback(results.rows)
     })
   }
 }

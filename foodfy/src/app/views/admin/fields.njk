@@ -1,4 +1,15 @@
 <div class="item">
+  <h1>Nome da receita</h1>
+  <div>
+    <input 
+      type="text"
+      name="title"
+      value="{{recipe.title}}">
+  </div>
+</div>
+
+
+<div class="item">
   <h1>Imagem da receita</h1>
   <div>
     <input 
@@ -6,6 +17,19 @@
       name="image" 
       placeholder="http://"
       value="{{ recipe.image }}">
+  </div>
+</div>
+
+<div class="item">
+  <h1>Chef</h1>
+  <div class="field-container">
+    <select name="chef">
+      {% for chef in chefsOptions %}
+      <option value="{{chef.id}}" {% if recipe.chef_id == chef.id %} selected {% endif %}>
+        {{chef.name}}
+      </option>
+      {% endfor %}
+    </select>
   </div>
 </div>
     

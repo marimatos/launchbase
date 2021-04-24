@@ -1,7 +1,7 @@
 const express = require('express')
 const routes = express.Router()
-const site = require('./controllers/site')
-const recipes = require('./controllers/recipes')
+const site = require('./app/controllers/site')
+const recipes = require('./app/controllers/recipes')
 
 routes.get('/', function(req, res){
 	return res.redirect('/site');
