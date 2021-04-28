@@ -1,0 +1,47 @@
+{% extends "layoutAdmin.njk" %}
+
+{% block head %}
+  <title>Chef</title>
+{% endblock %}
+
+{% block content%}
+<main>
+
+  <div class="action-menu">
+    <h1>Chef: {{chef.name}}</h1>
+    <a class="button-admin" href="#">Editar chef</a>
+  </div>
+
+  <section id="chef-detail">    
+    <img id="chef-img" src="{{chef.avatar_url}}" alt="Imagem de {{chef.name}}">
+    <h3>{{chef.name}}</h3>
+    <p>{{chef.total_recipes}} receitas</p>
+  </section>
+
+  <section class="admin-container">
+    <h1>Receitas</h1>   
+
+      <div class="recipes-admin">
+        {% for recipe in recipesList %}
+        <div class="card" id="burger">
+          <div class="card-img-container">
+            <img src="{{recipe.image}}" alt="Imagem de {{recipe.title}}"/>
+          </div>
+          <div class="card-content">        
+            <p id="title">{{recipe.title}}</p>
+            <p id="chef">por {{recipe.chef_name}}</p>
+            <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
+          </div>        
+        </div>
+        {% endfor %}
+    </div>
+       
+    
+</section>
+  
+  
+</main>
+
+<script src="/script.js"></script>
+
+{%endblock%}

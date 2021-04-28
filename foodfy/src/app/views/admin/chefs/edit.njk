@@ -1,0 +1,44 @@
+{% extends "layoutAdmin.njk" %}
+
+{% block head %}
+  <title>Editar Chef</title>
+{% endblock %}
+
+{% block content %}
+  
+  <section class="admin-container">
+    <div class="action-menu">
+    <h1>Chef: {{chef.name}}</h1>
+    <div class="buttons">
+      <button type="submit" form="form-delete" class="button-admin btn-delete">Deletar</button>
+      <button type="submit" form="form-edit" class="button-admin">Salvar chef</button>
+    </div>
+  </div>
+
+    <form id="form-edit" method="POST" action="/admin/chefs?_method=PUT">      
+      {% include 'admin/chefs/fields.njk' %}
+      <input type="hidden" name="id" value="{{chef.id}}">      
+    </form>
+
+     <form id='form-delete' action="/admin/chefs?_method=DELETE" method="post">
+      <input type="hidden" name="id" value='{{chef.id}}'>
+    </form>
+    
+
+  </section>
+
+
+
+<script>
+  const formDelete = document.querySelector("#form-delete")
+  formDelete.addEventListener("submit", function(event) {
+    const confirmation = confirm("Deseja deletar?")
+    if(!confirmation) {
+      event.preventDefault()
+    }
+  })
+</script>
+
+
+
+{% endblock%}

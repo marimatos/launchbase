@@ -93,7 +93,7 @@ header a:hover {
 #chef {
   color: rgba(119,119,119,1);
   font-size: 14px;
-  margin-top: 5px;
+
 }
 
 footer{
@@ -279,6 +279,25 @@ span {
   object-position: center
 }
 
+.recipes-admin .card .card-content #title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.recipes-admin .card .card-content #chef {
+  margin-left: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 0;
+}
+
+.recipes-admin .card .card-content a {
+  color: #6558C3;
+  font-weight: bold;
+  font-size: 14px;
+  text-decoration: none;
+}
+
 /*editar receita*/
 .item h1{
   font-size: 16px;
@@ -316,3 +335,70 @@ textarea,
   font-family: 'Roboto', sans-serif;
   line-height: 24px;
 }
+
+/*Admin - Chefs*/
+
+.chefs-admin {
+  margin: 0 auto;
+  max-width: 940px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-row-gap: 30px;
+}
+
+.chefs-admin .card {
+  display: flex;
+}
+
+.chefs-admin .card .card-img-container img{
+  width: 64px;
+  height: 64px;
+  margin-right: 20px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.chefs-admin .card .card-content #chef {
+  font-size: 18px;
+  color: #111111;
+}
+
+.chefs-admin .card .card-content a {
+  font-size: 14px;
+  color: #6558C3;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.chefs-admin .card .card-content a:hover {
+  color: #362b8b;
+}
+
+/*Chefs - detalhe*/
+#chef-detail {
+  text-align: center;
+}
+
+#chef-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  margin-bottom: 30px;
+}
+
+#chef-detail h3 {
+  font-size: 36px;
+  color: #111111;
+  line-height: 42px;
+  margin-bottom: 4px;
+}
+
+#chef-detail p {
+  font-size: 20px;
+  color: #777777;
+  margin-bottom: 50px;
+}
+
