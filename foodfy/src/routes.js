@@ -13,6 +13,7 @@ routes.get('/site', site.index )
 routes.get('/site/about', site.about)
 routes.get('/site/recipes', site.recipes)
 routes.get("/site/recipes/:id", site.recipe)
+routes.get("/site/chefs", site.chefs)
 
 //admin - recipes
 routes.get("/admin/recipes", recipes.index ); //listagem de receitas

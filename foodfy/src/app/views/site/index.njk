@@ -1,5 +1,12 @@
 {% extends "layout.njk" %}
 
+{% block header %}
+    <form action="/site/recipes" method="GET" id="search">
+        <input type="text" name="filter" value="{{ filter }}" placeholder="Buscar uma receita">
+        <button type="submit" class="button">Buscar</button>
+    </form>
+{% endblock header %}
+
 {% block content %}
 <div class="intro">
   <img src="/assets/chef.png" alt="Chef">
@@ -9,7 +16,7 @@
   do mundo inteiro.</p>      
 </div>
 
-<h1 id="info">Receitas</h1>
+<h1 id="info">Mais acessadas</h1>
 
 <section class="recipes">
 
@@ -23,7 +30,7 @@
     </div>
     <div class="card-content">      
       <a href="/site/recipes/{{recipe.id}}">{{recipe.title}}</a>
-      <p id="chef">{{recipe.author}}</p>
+      <p id="chef">por {{recipe.chef_name}}</p>
     </div>        
   </div>
 

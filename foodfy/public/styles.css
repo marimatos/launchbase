@@ -12,7 +12,37 @@ body {
 }
 
 header {
-  margin: 20px 210px;
+  width: 940px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+header form {
+  display: flex;
+}
+
+#search button {
+  color: white;
+  background: #6558C3;
+  border-radius: 4px;
+  padding: 5px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#search input {
+  display: block;
+  width: 246px;
+  height: 37px;
+  padding: 5px 20px;
+  background: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 8px;
 }
 
 header a {  
@@ -79,10 +109,19 @@ header a:hover {
   grid-row-gap: 30px;
 }
 
-.card-img-container img {
-  width: 100%;
+.recipes .card-img-container img {
+  width: 300px;
+  height: 140px;
   border-radius: 15px;
   cursor: pointer;
+  margin-bottom: 20px
+}
+
+.recipes .card-content a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #111111;
+  margin-bottom: 5px;
 }
 
 #title {
