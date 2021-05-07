@@ -53,6 +53,22 @@ body {
   background-color: #e08011;
 }
 
+.button.edit {
+  background-color: var(--secondary-color);
+}
+
+.button.edit:hover {
+  background-color: #0a90e9;
+}
+
+.button.delete {
+  background-color: lightgray;
+}
+
+.button.delete:hover {
+  background-color: rgb(223, 106, 106);
+}
+
 header {
   background-color: black;
   color: white;
@@ -137,6 +153,10 @@ section.form .header h3 {
   margin-bottom: 16px;
 }
 
+form .fields {
+  margin-bottom: 64px;
+}
+
 form .item {
   margin-bottom: 16px;
 }
@@ -179,6 +199,18 @@ form .item textarea {
   min-height: 150px;
 }
 
-form .fields {
-  margin-bottom: 64px;
+.form .item span {
+  padding: 8px 16px;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+  color: white;
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
 }
+
+
+
